@@ -1,0 +1,30 @@
+import tito.* 
+import bebidas.* // Las importo aunque tito las importe
+
+
+// obs: tito no tiene una variable que acumule algo como en tom y jerry que acumulaba energía
+describe "test de las aventuras de tito"{
+  
+  test "tito inicialmente si consumió 0 de cianuro su velocidad es 0"{
+    assert.equals(0, tito.velocidad())
+  }
+  
+  test "tito si toma 200 de whisky su velocidad pasa a ser"{
+    tito.consumir(200, whisky)
+  assert.equals(0.9**200*490/70, tito.velocodad())
+  }
+  
+  test "tito ahora toma tereré y su velocidad es"{
+    tito.consumir(5, terere)
+    assert.equals(1*490/70, tito.velocidad())
+  }
+  
+  test "tito inicia muerto"{
+    assert.that(tito.estaMuerto())
+  }
+  
+  test "si tito toma whisky, revive"
+  tito.consumir(10, whisky)
+  assert.notThat(tito.estaMuerto())
+  
+}
